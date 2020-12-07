@@ -7,8 +7,27 @@ public class Main {
         // give path
         String path = "/Users/azadehwork/Desktop/text.txt";
 
+        //read from URL
+        String internetPageText = "";
+
+        try {
+            internetPageText  = TextReadInternet.getText("https://redi-school.github.io/intermediate-java/project/");
+        }  catch (Exception e) {
+            e.printStackTrace();
+        }
+
+
+        // choose if you want to read from URL or file. Uncomment the TextAnalyzer object you want to read
+
+        // reads URL page to String, decomposes to sentences and words
+        TextAnalyzer analyzer = new TextAnalyzer(internetPageText);
+
+        // OR
+
         // reads file to String, decomposes to sentences and words
-        TextAnalyzer analyzer = new TextAnalyzer(ReadFile.getText(path));
+        // TextAnalyzer analyzer = new TextAnalyzer(ReadFile.getText(path));
+
+
 
         // iterate through sentences array to print all sentences
         int countSentences = analyzer.getSentenceCount();
