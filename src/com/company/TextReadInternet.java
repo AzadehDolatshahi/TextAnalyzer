@@ -25,8 +25,4 @@ public class TextReadInternet {
         return output;
     }
 
-    public static void main(String[] args) throws Exception {
-        String content = TextReadInternet.getText(args[0]);
-        System.out.println(content);
-    }
 }
