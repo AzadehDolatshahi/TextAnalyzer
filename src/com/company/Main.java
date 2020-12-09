@@ -11,7 +11,7 @@ public class Main {
         String internetPageText = "";
 
         try {
-            internetPageText  = TextReadInternet.getText("https://redi-school.github.io/intermediate-java/project/");
+            internetPageText  = TextReadInternet.getText("https://en.wikipedia.org/wiki/Java_(programming_language)");
         }  catch (Exception e) {
             e.printStackTrace();
         }
